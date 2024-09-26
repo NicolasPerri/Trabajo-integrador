@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Arte del Met</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Objetos de Arte del Met</h1>
+    <div class="grid">
+      <% objects.forEach(function(object) { %>
+        <div class="card">
+          <img src="<%= object.imageUrl %>" alt="<%= object.title %>">
+          <div class="card-title"><%= object.title %></div>
+          <div class="card-details">
+            Cultura: <%= object.culture %>, Dinastía: <%= object.dynasty %>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>

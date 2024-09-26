@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalles de Objeto</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Detalles del Objeto</h1>
+  <img src="<%= object.primaryImage %>" alt="<%= object.title %>">
+  <h2><%= object.title %></h2>
+  <p>Cultura: <%= object.culture %></p>
+  <p>Dinastía: <%= object.dynasty %></p>
+
+  <h3>Imágenes adicionales:</h3>
+  <% object.additionalImages.forEach(image => { %>
+    <img src="<%= image %>" alt="Imagen adicional de <%= object.title %>">
+  <% }) %>
+
+  <a href="/">Volver</a>
+</body>
+</html>
