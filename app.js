@@ -2,8 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-const translate = require('./translate');
-const pagination = require('./pagination');
+const translate = require('./src/translate');
+const pagination = require('./src/pagination');
 
 const app = express();
 
